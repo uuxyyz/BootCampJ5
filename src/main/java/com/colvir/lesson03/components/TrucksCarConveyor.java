@@ -24,7 +24,7 @@ public class TrucksCarConveyor implements CarConveyor {
             public String getVin() {
                 return String.format("X-%s-D-%d-ID-%d-%d",
                         UUID.randomUUID().toString().substring(0, 6).replace("-", "").toUpperCase(),
-                        new Date().getTime(), id.get(), createCount.incrementAndGet());
+                        new Date().getTime(), getId(), createCount.incrementAndGet());
             }
 
             @Override
@@ -38,4 +38,10 @@ public class TrucksCarConveyor implements CarConveyor {
             }
         };
     }
+
+    @Override
+    public int getId() {
+        return id.get();
+    }
+
 }

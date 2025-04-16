@@ -1,10 +1,7 @@
 package com.colvir.lesson03.services;
 
-import com.colvir.lesson03.model.Car;
-
-import java.util.List;
+import com.colvir.lesson03.model.CreatedCars;
 
 public interface CarFactory {
-    List<Car> createCars();
-    CarConveyor getCarConveyor();
+    CreatedCars createCars();
 }

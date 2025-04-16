@@ -4,6 +4,7 @@ import com.colvir.lesson03.components.TrucksCarConveyor;
 import com.colvir.lesson03.components.TrucksCarFactory;
 import com.colvir.lesson03.services.CarConveyor;
 import com.colvir.lesson03.services.CarFactory;
+import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -21,8 +22,8 @@ public class TrucksCarFactoryConfig {
     }
 
     @Bean
-    public CarFactory trucksCarFactory(CarConveyor carConveyor) {
-        return new TrucksCarFactory(carConveyor);
+    public CarFactory trucksCarFactory(ObjectFactory<CarConveyor> carConveyorObjectFactory) {
+        return new TrucksCarFactory(carConveyorObjectFactory);
     }
 
 }
