@@ -18,13 +18,13 @@ public class Main {
 
     private static int createCars(CarFactory carFactory) {
         CreatedCars createdCars = carFactory.createCars();
-        for (Car car : createdCars.getCarList()) {
+        for (Car car : createdCars.carList()) {
             System.out.println(car);
         }
 
-        System.out.printf("%d cars created on %d%n", createdCars.getCarList().size(), createdCars.getConveyorId());
+        System.out.printf("%d cars created on %d%n", createdCars.carList().size(), createdCars.conveyorId());
 
-        return createdCars.getConveyorId();
+        return createdCars.conveyorId();
     }
 
 }
