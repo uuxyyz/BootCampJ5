@@ -3,7 +3,7 @@ package com.colvir.lesson02.components;
 import com.colvir.lesson02.services.CelsiusTemperatureConverter;
 import org.springframework.stereotype.Component;
 
-@Component("CelsiusToFahrenheit")
+@Component(TemperatureConverterFactory.TEMP_CONV_CELSIUS_TO_FAHRENHEIT)
 public class CelsiusToFahrenheitTemperatureConverter implements CelsiusTemperatureConverter {
     @Override
     public float convert(float sourceTemperature) {
