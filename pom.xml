@@ -13,5 +13,6 @@
         <module>base</module>
         <module>lesson05/videogamepublisherserver</module>
         <module>lesson05/videogamepublisherclient</module>
+        <module>lesson07</module>
     </modules>
 </project>
